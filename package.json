@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
+    "start": "node dist/src/index.js",
     "test:unit": "jest --config=jest.config.js",
     "db:create": "npx sequelize db:create",
     "db:drop": "npx sequelize db:drop",
