@@ -1,0 +1,57 @@
+{
+  "name": "block",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "test:unit": "jest --config=jest.config.js",
+    "db:create": "npx sequelize db:create",
+    "db:drop": "npx sequelize db:drop",
+    "db:fresh": "npm run db:drop && npm run db:create && npm run db:migrate && npm run db:seed",
+    "db:migrate": "npx sequelize db:migrate",
+    "db:migrate:create": "npx sequelize migration:create --name=new-migration",
+    "db:migrate:undo:last": "npx sequelize db:migrate:undo",
+    "db:migrate:undo:all": "npx sequelize db:migrate:undo:all",
+    "db:seed": "npx sequelize db:seed:all",
+    "db:seed:create": "npx sequelize seed:create --name=new-seeder",
+    "db:seed:undo:last": "npx sequelize db:seed:undo",
+    "db:seed:undo:all": "npx sequelize db:seed:undo:all"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Haikhell/blockchain.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Haikhell/blockchain/issues"
+  },
+  "homepage": "https://github.com/Haikhell/blockchain#readme",
+  "devDependencies": {
+    "@types/jest": "^27.5.1",
+    "@typescript-eslint/eslint-plugin": "^5.25.0",
+    "@typescript-eslint/parser": "^5.25.0",
+    "eslint": "^8.15.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "typescript": "^4.6.4"
+  },
+  "dependencies": {
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.13",
+    "@types/sequelize": "^4.28.13",
+    "axios": "^0.27.2",
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "ethers": "^5.6.6",
+    "express": "^4.18.1",
+    "jest": "^28.1.0",
+    "pg": "^8.7.3",
+    "sequelize": "^6.19.2",
+    "sequelize-cli": "^6.4.1",
+    "sequelize-typescript": "^2.1.3",
+    "ts-jest": "^28.0.2"
+  }
+}
